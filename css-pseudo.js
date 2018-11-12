@@ -1,3 +1,4 @@
+// Use: document.getElementById('test).pseudoStyle('before', 'content', 'This is text for test');
 HTMLElement.prototype.pseudoStyle = function() {
   function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -22,4 +23,7 @@ HTMLElement.prototype.pseudoStyle = function() {
   }
 }();
 
-// Use: document.getElementById('test).pseudoStyle('before', 'content', 'This is text for test');
+
+
+// Get property css value of pseudo element
+var color = window.getComputedStyle(document.querySelector('#test'), ':before').getPropertyValue('content');
