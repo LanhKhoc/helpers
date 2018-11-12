@@ -24,6 +24,9 @@ HTMLElement.prototype.pseudoStyle = function() {
 }();
 
 
+// Add css to pseudo directly
+document.styleSheets[0].addRule('#test:before','content: "This is text for test"');
+
 
 // Get property css value of pseudo element
 var color = window.getComputedStyle(document.querySelector('#test'), ':before').getPropertyValue('content');
